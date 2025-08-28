@@ -3,11 +3,11 @@ import pygame
 import time
 import random
 
-snake_speed = 15
+snake_speed = 10
 
 # Window size
-window_x = 720
-window_y = 480
+window_x = 800
+window_y = 600
 
 # defining colors
 black = pygame.Color(0, 0, 0)
@@ -112,7 +112,8 @@ while True:
                 change_to = 'LEFT'
             if event.key == pygame.K_RIGHT:
                 change_to = 'RIGHT'
-
+        if event.type == pygame.QUIT :
+            pygame.display.quit()
     # If two keys pressed simultaneously
     # we don't want snake to move into two
     # directions simultaneously
